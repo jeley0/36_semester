@@ -14,7 +14,7 @@ def job(st="ку", time=None):
 string = input("string -->")
 time_start = input("time start-->")
 time_end = input("time end-->")
-schedule.every().hour.at(":27").do(job, st=string, time=[time_start, time_end])
+schedule.every().hour.at(":00").do(job, st=string, time=[time_start, time_end])
 
 while True:
     schedule.run_pending()
