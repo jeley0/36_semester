@@ -8,7 +8,7 @@ with ZipFile('input.zip') as myzip:
     os.chdir(f'zip')
     count = 0
     for currentdir, dirs, files in os.walk('.'):
-        size = 0
+        size = 1
         for i in files:
             try:
                 with open(os.path.join(currentdir, i)) as json_file:
