@@ -1,7 +1,7 @@
 import os
 
 
-def pretty_size(size):
+def human_format(size):
     prefixes = ['Б', 'КБ', 'МБ', 'ГБ', 'ТБ']
 
     steps = 0
@@ -13,4 +13,4 @@ def pretty_size(size):
 
 
 files = [f for f in os.listdir('.') if os.path.isfile(f)]
-print(*[f'{f} {pretty_size(os.path.getsize(f))}' for f in files], sep='\n')
+print(*[f'{f} {human_format(os.path.getsize(f))}' for f in files], sep='\n')
